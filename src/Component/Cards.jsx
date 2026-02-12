@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from  'react-redux'
-import { AddItem } from '../redux/cartSlice'
+import { AddItem } from '../redux/CartSlice'
 function Cards({name,image,price,id,qty}) {
   let dispatch=useDispatch()
  
