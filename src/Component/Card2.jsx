@@ -1,7 +1,7 @@
 import React from 'react'
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { useDispatch } from 'react-redux';
-import { DicreamentQty, IncreamentQty, RemoveItem } from '../redux/cartSlice';
+import { DicreamentQty, IncreamentQty, RemoveItem } from '../redux/CartSlice';
 function Card2({name,id,price,image,qty}) {
   let dispatch=useDispatch()
   return (
