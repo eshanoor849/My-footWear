@@ -14,7 +14,7 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4"> footwear👟</h2>
             <p className="text-pink-200 text-sm">
-              Building modern and responsive web applications with great user
+              Building modern and responsive  <br /> web applications
               experience.
             </p>
           </div>
@@ -25,20 +25,20 @@ const Footer = () => {
             <ul className="space-y-2 text-pink-200">
               <li>
                 <a href="https://www.instagram.com/" className="hover:text-gray-400 transition flex gap-x-5">
-                <FaInstagram  className="text-[#e6a90e] h-10 w-10"/>
+                <FaInstagram  className="text-[#e6a90e] h-7 w-7"/>
                instagram
                 </a>
               </li>
            
               <li>
-                <a href="https://www.facebook.com/" className="hover:text-gray-400 transition flex gap-x-5">
-                  <FaFacebook className="text-[#0e52e6] h-10 w-10" />
+                <a href="https://www.facebook.com/" className="hover:text-gray-400 transition flex">
+                  <FaFacebook className="text-[#0e52e6] h-7 w-17" />
                   Facebook
                 </a>
               </li>
               <li>
                 <a href="https://x.com/" className="hover:text-gray-400 transition flex gap-x-5">
-                  <FaTwitter  className="text-[#0e7ae6] h-10 w-10"  />
+                  <FaTwitter  className="text-[#0e7ae6] h-7 w-7"  />
                   twitter
                 </a>
               </li>

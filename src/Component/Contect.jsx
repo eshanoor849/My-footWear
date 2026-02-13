@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Footer from './Footer'
+import { RxCross2 } from "react-icons/rx"
+import { dataContext } from '../context/UserContext'
+import { useSelector } from 'react-redux'
+import Card2 from './Card2'
 
 function Contact() {
+   
+    const { showCart, setShowCart } = useContext(dataContext)
+  let items = useSelector(state => state.cart)
+  let subtotal = items.reduce((total, item ) => {
+      
+      let cleanPrice = Number(item.qty*item.price.toString().replace(/[^\d]/g, ''));
+      return total + cleanPrice;
+  }, 0);
+  
+  let deliveryFee = 250;
+  
+  
+  
+  
+  console.log("Subtotal:", subtotal); 
+  
+    let total = Math.floor(subtotal+deliveryFee);
   return (
     <div className='min-h-screen bg-[#121212] flex flex-col justify-between'>
 
@@ -87,6 +108,80 @@ function Contact() {
 
         </div>
       </div>
+      {/* Cart Sidebar With Overlay */}
+{showCart && (
+  <div
+    className="fixed inset-0 bg-black/40 backdrop-blur-sm z-40 transition-opacity duration-300"
+    onClick={() => setShowCart(false)}
+  >
+    {/* Sidebar */}
+    <div
+      className={`w-full md:w-[40vw] h-full fixed top-0 right-0 
+      bg-[#121212] shadow-xl p-6 overflow-auto 
+      transform transition-transform duration-500 
+      ${showCart ? "translate-x-0" : "translate-x-full"}`}
+      
+      onClick={(e) => e.stopPropagation()}  // 👈 prevents closing when clicking inside
+    >
+      <header className='flex justify-between items-center'>
+        <span className='text-[#8a044f] font-bold text-[18px]'>
+          Order items
+        </span>
+        <RxCross2
+          onClick={() => setShowCart(false)}
+          className='w-5 h-5 cursor-pointer text-[#8a044f] hover:text-[#a80762]'
+        />
+      </header>
+
+      {items.length > 0 ? (
+        <>
+          <div className='w-full mt-8 flex flex-col gap-10'>
+            {items.map((item) => (
+              <Card2
+                key={item.id}
+                name={item.name}
+                price={item.price}
+                image={item.image}
+                id={item.id}
+                qty={item.qty}
+              />
+            ))}
+          </div>
+
+          <div className='w-full border-t-2 border-gray-400 mt-7 flex flex-col gap-2 p-8 border-b-2 items-center'>
+            <div className='w-full flex justify-between'>
+              <span className='text-xl text-[#8a044f] font-semibold'>Subtotal</span>
+              <span className='text-[#8a044f] font-semibold'>Rs {subtotal}</span>
+            </div>
+
+            <div className='w-full flex justify-between'>
+              <span className='text-xl text-[#8a044f] font-semibold'>Delivery Fee</span>
+              <span className='text-[#8a044f] font-semibold'>Rs {deliveryFee}</span>
+            </div>
+
+            <div className='w-full flex justify-between'>
+              <span className='text-xl text-[#8a044f] font-semibold'>Taxes</span>
+              <span className='text-[#8a044f] font-semibold'>Rs {taxes}</span>
+            </div>
+          </div>
+
+          <div className='w-full flex justify-between items-center mt-4'>
+            <span className='text-xl text-[#8a044f] font-bold'>Total</span>
+            <span className='text-[#8a044f] font-bold'>Rs {total}</span>
+          </div>
+
+          <button className='p-3 w-[80%] bg-[#8a044f] text-lg text-[#b3b3b3] rounded-lg hover:bg-[#66033e] transition-all duration-200 cursor-pointer ml-9 mt-5'>
+            Place Order
+          </button>
+        </>
+      ) : (
+        <div className='text-center text-[#8a044f] text-2xl font-semibold p-5'>
+          Empty cart
+        </div>
+      )}
+    </div>
+  </div>
+)}
 
       <Footer />
     </div>
