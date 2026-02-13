@@ -139,10 +139,6 @@ console.log("Subtotal:", subtotal);
               <span className='text-[#8a044f] font-semibold'>Rs {deliveryFee}</span>
             </div>
 
-            <div className='w-full flex justify-between'>
-              <span className='text-xl text-[#8a044f] font-semibold'>Taxes</span>
-              
-            </div>
           </div>
 
           <div className='w-full flex justify-between items-center mt-4'>
