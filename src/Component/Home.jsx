@@ -64,9 +64,9 @@ console.log("Subtotal:", subtotal);
           ))}
         </Carousel>
       </div>
-
-      <Card1 className="relative z-0" />
-
+<div className="relative z-0">
+      <Card1  />
+</div>
       <div className='bg-[#121212]'>
         <h1 className='text-3xl font-bold text-[#e6d00e] text-center mb-2'>
           Our Footwear Collection
@@ -115,7 +115,7 @@ console.log("Subtotal:", subtotal);
 
       {items.length > 0 ? (
         <>
-          <div className='w-full mt-8 flex flex-col gap-10'>
+          <div className='w-full mt-8 flex flex-col gap-10 '>
             {items.map((item) => (
               <Card2
                 key={item.id}
