@@ -65,7 +65,7 @@ console.log("Subtotal:", subtotal);
         </Carousel>
       </div>
 
-      <Card1 />
+      <Card1 className="z-0" />
 
       <div className='bg-[#121212]'>
         <h1 className='text-3xl font-bold text-[#e6d00e] text-center mb-2'>
@@ -87,7 +87,7 @@ console.log("Subtotal:", subtotal);
         ))}
       </div>
 
-      {/* Cart Sidebar */}
+    
 {/* Cart Sidebar With Overlay */}
 {showCart && (
   <div

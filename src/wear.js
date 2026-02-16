@@ -16,7 +16,7 @@ export const wear_items = [
     {"id": 13,  "shoe_name":'princes Shoe',"shoe_quantity": 1, "shoe_image":'https://i.ebayimg.com/images/g/HGoAAOSwD7Nnqrq0/s-l1200.jpg' , "price": '4349/-'},
     {"id": 14, "shoe_name":'Casual shoe for Men',  "shoe_quantity": 1, "shoe_image": "https://www.action.pk/cdn/shop/files/11_5f3ceed8-9970-44fb-a5e2-b9ce8543596f.jpg?v=1732801242&width=3840", "price": '1099/-'},
     {"id": 15,"shoe_name":'Formal shoe', "shoe_quantity": 1, "shoe_image": 'https://www.shutterstock.com/image-photo/shoes-oxford-leather-man-elegant-260nw-1708587961.jpg', "price": '1399/-'},
-    {"id": 16,  "shoe_name":'sports Shoe',"shoe_quantity": 1, "shoe_image":'https://m.media-amazon.com/images/I/61KBS3tZmtL._AC_UF350,350_QL80_.jpg' , "price": '2349/-'},
+    {"id": 16,  "shoe_name":'loafer Shoe',"shoe_quantity": 1, "shoe_image":'https://m.media-amazon.com/images/I/61KBS3tZmtL._AC_UF350,350_QL80_.jpg' , "price": '2349/-'},
    {"id": 17, "shoe_name":'loafer Shoe',  "shoe_quantity": 1, "shoe_image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0-32XvgOOVn1PSDhrJVtW9oncnlSilYWtog&s", "price": '2099/-'},
     {"id": 18,  "shoe_name":' Sneakers',"shoe_quantity": 1, "shoe_image":'https://image.made-in-china.com/2f0j00vPZkhTsWYgpR/Basketball-Shoes-Sneaker-Athletic-Shoes-for-Men-High-Quality-Sports-Shoes.webp' , "price": '2349/-'},
     {"id": 19, "shoe_name":'sports Sneaker',  "shoe_quantity": 1, "shoe_image": "https://img.kwcdn.com/product/fancy/a63889a9-6c6a-485b-9b9a-3c018cd64726.jpg?imageMogr2/auto-orient%7CimageView2/2/w/800/q/70/format/webp", "price": '2099/-'},
