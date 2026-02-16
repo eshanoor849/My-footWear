@@ -65,7 +65,7 @@ console.log("Subtotal:", subtotal);
         </Carousel>
       </div>
 
-      <Card1 className="z-0" />
+      <Card1 className="relative z-0" />
 
       <div className='bg-[#121212]'>
         <h1 className='text-3xl font-bold text-[#e6d00e] text-center mb-2'>
