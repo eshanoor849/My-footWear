@@ -3,7 +3,7 @@ import React from 'react'
 function Newarrivals(props) {
   return (
     
-        <div className='bg-[#1e1e1e] rounded-xl shadow-lg p-4 mx-2'>
+        <div className='bg-[#1e1e1e] rounded-xl shadow-lg p-4 mx-2 z-40'>
     <img className='w-full h-50 object-cover rounded-lg'
      src={props.Url} alt="" />
  <h2 className='text-xl font-semibold mt-3 text-[#8a044f]'>{props.name}</h2>
